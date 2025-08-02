@@ -17,8 +17,6 @@ logging.basicConfig(
 )
 
 # Il tuo token
-# TOKEN = '8386068547:AAERaYvikIaA7wcq0Lita64anVE5q5ccoQk' # marco
-# TOKEN = '8033536874:AAF1R4uXc_tQGOYg2y7u5JLHxQFPBbjrnHI'  # honeywell
 TOKEN = '8209059450:AAFFP8iSoH1pS1YiZCGFcvAI68Pz0GzNd7s'  # tastiera
 
 
@@ -54,9 +52,7 @@ async def text_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text='Waiting for data from the plant...'
         )
     else:
-        await context.bot.send_message(
-            chat_id=update.effective_chat.id,
-            text='Questa zona non esiste')
+        return
 
 
 def main():
